@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.box-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background, #fff);
+}
+
+.sidebar {
+    min-width: 10rem;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    background-color: #23252E;
+    color: #cccccc;
+}
+
+.sidebar label {
+    text-transform: capitalize;
+    margin: 0.75rem 0 0.25rem 0;
+    font-weight: bolder;
+}
+
+
+#box-image {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 1rem;
+    background-color: var(--box, #8A2BE2);
+    box-shadow: 
+    calc(var(--x, 3) * 1px)
+    calc(var(--y, 3) * 1px)
+    calc(var(--blur, 3) * 1px)
+    calc(var(--spread, 3) * 1px)
+    var(--shadow, #000)
+}
+
+input:not([type="color"]) {
+    padding: 0.25rem 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+input:not([type="color"]):focus {
+    border-color: #0af;
+}
+
+input[type="color"] {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
